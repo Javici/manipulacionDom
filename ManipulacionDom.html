@@ -89,6 +89,10 @@
         main button + button {
             margin-left: 10px;
         }
+        .heli{
+            background-color: #f37021;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -96,43 +100,46 @@
     <main>
         <label for="saludo"><h3>Nombre:</h3></label>
         <input type="text" id="saludo">
-        <button onclick="saludar"><h3>Saludar</h3></button>
+        <button onclick="saludar()"><h3>Saludar</h3></button>
+        <div id="divSaludo"></div>
         <hr>
         <input type="number" id="num1"> + <input type="number" id="num2">
-        <button onclick="sumar"><h3>Sumar</h3></button>
+        <div id="divSuma"></div>
+        <button onclick="sumar()"><h3>Sumar</h3></button>
         <hr>
         <label for="temp"><h3>Temperatura en Celsius</h3></label>
         <input type="number" id="temp">
-        <button onclick="convertir"><h3>Convertir a Fahrenheit</h3></button>
+        <button onclick="convertir()"><h3>Convertir a Fahrenheit</h3></button>
         <hr>   
         <h3>Contador</h3>
         <p>0</p>
-        <button onclick="contador"><h3>Incrementar</h3></button>
+        <button onclick="contador()"><h3>Incrementar</h3></button>
         <hr>
         <label for="lista"><h3>Lista de Compras Dinamica</h3></label>
         <input type="text">
-        <button onclick="anadir"><h3>Añadir</h3></button>
+        <button onclick="anadir()"><h3>Añadir</h3></button>
         <hr>
         <label for="arrayNum"><h3>Array de Numeros</h3></label>
         <input type="text">
-        <button onclick="sumarray">Calcular Suma</button>
+        <button onclick="sumarray()">Calcular Suma</button>
         <hr>
         <h3>Cambia el color del fondo</h3>
-        <button onclick="rojo">Rojo</button>
-        <button onclick="verde">Verde</button>
-        <button onclick="azul">Azul</button>
-        <button onclick="blanco">Blanco</button>
+        <button onclick="rojo()">Rojo</button>
+        <button onclick="verde()">Verde</button>
+        <button onclick="azul()">Azul</button>
+        <button onclick="blanco()">Blanco</button>
         <hr>
         <h3>Mostrar/Ocultar texto</h3>
         <p></p>
-        <button onclick="ocultar">Ocultar</button>
+        <button onclick="ocultar()">Ocultar</button>
         <hr>
         <h3>Incremento y decremento</h3>
         <p>0</p>
-        <button onclick="suma1">+</button>
-        <button onclick="resta1">-</button>
-
-    
+        <button onclick="suma1()">+</button>
+        <button onclick="resta1()">-</button>
+        
+        
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
