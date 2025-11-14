@@ -93,9 +93,7 @@
             background-color: #f37021;
             color: white;
         }
-        .oculto{
-            display: block;
-        }
+
     </style>
 </head>
 <body>
@@ -103,29 +101,30 @@
     <main>
         <label for="saludo"><h3>Nombre:</h3></label>
         <input type="text" id="saludo">
-        <button onclick="saludar()"><h3>Saludar</h3></button>
+        <button onclick="saludar()">Saludar</button>
         <div id="divSaludo"></div>
         <hr>
+        <label for=""><h3>Suma 2 numeros:</h3></label>
         <input type="number" id="num1"> + <input type="number" id="num2">
         <div id="divSuma"></div>
-        <button onclick="sumar()"><h3>Sumar</h3></button>
+        <button onclick="sumar()">Sumar</button>
         <hr>
-        <label for="temp"><h3>Temperatura en Celsius</h3></label>
+        <label for="temp"><h3>Temperatura en Celsius:</h3></label>
         <input type="number" id="temp">
         <div id="FHT"></div>
-        <button onclick="convertir()"><h3>Convertir a Fahrenheit</h3></button>
+        <button onclick="convertir()">Convertir a Fahrenheit</button>
         <hr>   
-        <h3>Contador</h3>
+        <h3>Contador:</h3>
         <div id="divContador">0</div>
-        <button onclick="contador()"><h3>Incrementar</h3></button>
+        <button onclick="contador()">Incrementar</button>
         <hr>
         
-        <label for="lista"><h3>Lista de Compras Dinamica</h3></label>
+        <label for="lista"><h3>Lista de Compras Dinamica:</h3></label>
         <input type="text" id="lista">
-        <button onclick="lista()"><h3>Añadir</h3></button>
+        <button onclick="lista()">Añadir</button>
         <ul id="listadin"></ul>
         <hr>
-        <label for="arrayNum"><h3>Array de Numeros</h3></label>
+        <label for="arrayNum"><h3>Array de Numeros:</h3></label>
         <input type="text">
         <button onclick="sumarray()">Calcular Suma</button>
         <hr>
@@ -136,14 +135,17 @@
         <button onclick="blanco()">Blanco</button>
         <hr>
         <div id="registro">
-            <h3>Registro de personas</h3>
+            <label for=""><h3>Registro de personas:</h3></label>
+            <input type="text" id="nombreReg" placeholder="Nombre">
+            <input type="number" id="edadReg" placeholder="Edad">
+            <button onclick="registrar()">Registrar</button>
         </div>
         <hr>
-        <div id="oculto">
+        <div id="oculto" style="display: block;">
         <h3>Mostrar/Ocultar texto</h3></div>
         <button id="mostrar" onclick="ocultar()">Ocultar</button>
         <hr>
-        <h3>Incremento y decremento</h3>
+        <h3>Incremento y decremento:</h3>
         <p id="numero">0</p>
         <button onclick="suma1()">+</button>
         <button onclick="resta1()">-</button>
