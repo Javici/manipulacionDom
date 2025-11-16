@@ -1,157 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
 
-        body {
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.5;
-            padding: 20px;
-        }
+      body {
+        background-color: #f9f9f9;
+        color: #333;
+        line-height: 1.5;
+        padding: 20px;
+      }
 
-        header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+      header {
+        text-align: center;
+        margin-bottom: 30px;
+      }
 
-        header h1 {
-            font-size: 2.2rem;
-            color: #4a90e2;
-        }
+      header h1 {
+        font-size: 2.2rem;
+        color: #4a90e2;
+      }
 
-        main {
-            max-width: 700px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
+      main {
+        max-width: 700px;
+        margin: 0 auto;
+        background: #fff;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
 
-        h3 {
-            margin-bottom: 10px;
-            color: #4a4a4a;
-        }
+      h3 {
+        margin-bottom: 10px;
+        color: #4a4a4a;
+      }
 
-        label {
-            display: block;
-            margin-top: 20px;
-        }
+      label {
+        display: block;
+        margin-top: 20px;
+      }
 
-        input[type="text"], input[type="number"] {
-            width: 100%;
-            padding: 10px 12px;
-            margin: 8px 0 15px 0;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            font-size: 1rem;
-        }
+      input[type="text"],
+      input[type="number"] {
+        width: 100%;
+        padding: 10px 12px;
+        margin: 8px 0 15px 0;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 1rem;
+      }
 
-        button {
-            background-color: #4a90e2;
-            color: white;
-            border: none;
-            padding: 10px 18px;
-            margin: 5px 0;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background-color 0.3s;
-        }
+      button {
+        background-color: #4a90e2;
+        color: white;
+        border: none;
+        padding: 10px 18px;
+        margin: 5px 0;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s;
+      }
 
-        button:hover {
-            background-color: #357ab7;
-        }
+      button:hover {
+        background-color: #357ab7;
+      }
 
-        hr {
-            border: 0;
-            border-top: 1px solid #ddd;
-            margin: 25px 0;
-        }
+      hr {
+        border: 0;
+        border-top: 1px solid #ddd;
+        margin: 25px 0;
+      }
 
-        p {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-        }
+      p {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+      }
 
-   
-        main button + button {
-            margin-left: 10px;
-        }
-        .heli{
-            background-color: #f37021;
-            color: white;
-        }
-
+      main button + button {
+        margin-left: 10px;
+      }
+      .heli {
+        background-color: #f37021;
+        color: white;
+      }
     </style>
-</head>
-<body>
-    <Header><h1>Ejercicios de Manipulacion del DOM</h1></Header>
+  </head>
+  <body>
+    <header><h1>Ejercicios de Manipulacion del DOM</h1></header>
     <main>
-        <label for="saludo"><h3>Nombre:</h3></label>
-        <input type="text" id="saludo">
-        <button onclick="saludar()">Saludar</button>
-        <div id="divSaludo"></div>
-        <hr>
-        <label for=""><h3>Suma 2 numeros:</h3></label>
-        <input type="number" id="num1"> + <input type="number" id="num2">
-        <div id="divSuma"></div>
-        <button onclick="sumar()">Sumar</button>
-        <hr>
-        <label for="temp"><h3>Temperatura en Celsius:</h3></label>
-        <input type="number" id="temp">
-        <div id="FHT"></div>
-        <button onclick="convertir()">Convertir a Fahrenheit</button>
-        <hr>   
-        <h3>Contador:</h3>
-        <div id="divContador">0</div>
-        <button onclick="contador()">Incrementar</button>
-        <hr>
-        
-        <label for="lista"><h3>Lista de Compras Dinamica:</h3></label>
-        <input type="text" id="lista">
-        <button onclick="lista()">Añadir</button>
-        <ul id="listadin"></ul>
-        <hr>
-        <label for="arrayNum"><h3>Array de Numeros:</h3></label>
-        <input type="text">
-        <button onclick="sumarray()">Calcular Suma</button>
-        <hr>
-        <h3>Cambia el color del fondo</h3>
-        <button onclick="rojo()">Rojo</button>
-        <button onclick="verde()">Verde</button>
-        <button onclick="azul()">Azul</button>
-        <button onclick="blanco()">Blanco</button>
-        <hr>
-        <div id="registro">
-            <label for=""><h3>Registro de personas:</h3></label>
-            <input type="text" id="nombreReg" placeholder="Nombre">
-            <input type="number" id="edadReg" placeholder="Edad">
-            <button onclick="registrar()">Registrar</button>
-        </div>
-        <hr>
-        <div id="oculto" style="display: block;">
-        <h3>Mostrar/Ocultar texto</h3></div>
-        <button id="mostrar" onclick="ocultar()">Ocultar</button>
-        <hr>
-        <h3>Incremento y decremento:</h3>
-        <p id="numero">0</p>
-        <button onclick="suma1()">+</button>
-        <button onclick="resta1()">-</button>
-        
-        
+      <label for="saludo"><h3>Nombre:</h3></label>
+      <input type="text" id="saludo" />
+      <button onclick="saludar()">Saludar</button>
+      <div id="divSaludo"></div>
+      <hr />
+      <label for=""><h3>Suma 2 numeros:</h3></label>
+      <input type="number" id="num1" /> + <input type="number" id="num2" />
+      <div id="divSuma"></div>
+      <button onclick="sumar()">Sumar</button>
+      <hr />
+      <label for="temp"><h3>Temperatura en Celsius:</h3></label>
+      <input type="number" id="temp" />
+      <div id="FHT"></div>
+      <button onclick="convertir()">Convertir a Fahrenheit</button>
+      <hr />
+      <h3>Contador:</h3>
+      <div id="divContador">0</div>
+      <button onclick="contador()">Incrementar</button>
+      <hr />
+
+      <label for="lista"><h3>Lista de Compras Dinamica:</h3></label>
+      <input type="text" id="lista" />
+      <button onclick="lista()">Añadir</button>
+      <ul id="listadin"></ul>
+      <hr />
+      <label for="arrayNum"><h3>Array de Numeros:</h3></label>
+      <div id="arrayContainer">
+        <input type="number" id="arrayNum0" onblur="arrayNumeros(this)" />
+      </div>
+      <button onclick="sumarray()">Calcular Suma</button>
+      <div id="divArraySuma"></div>
+      <hr />
+      <h3>Cambia el color del fondo</h3>
+      <button onclick="rojo()">Rojo</button>
+      <button onclick="verde()">Verde</button>
+      <button onclick="azul()">Azul</button>
+      <button onclick="blanco()">Blanco</button>
+      <hr />
+      <div id="registro">
+        <label for=""><h3>Registro de personas:</h3></label>
+        <input type="text" id="nombreReg" placeholder="Nombre" />
+        <input type="number" id="edadReg" placeholder="Edad" />
+        <button onclick="registrar()">Registrar</button>
+        <div id="listaRegistro"></div>
+      </div>
+      <hr />
+      <div id="oculto" style="display: block">
+        <h3>Mostrar/Ocultar texto</h3>
+      </div>
+      <button id="mostrar" onclick="ocultar()">Ocultar</button>
+      <hr />
+      <h3>Incremento y decremento:</h3>
+      <p id="numero">0</p>
+      <button onclick="suma1()">+</button>
+      <button onclick="resta1()">-</button>
     </main>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
